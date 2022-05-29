@@ -30,8 +30,7 @@ function buscarFk(cnpj) {
 function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-    select * from empresa join endereco_empresa on fk_empresa = id_empresa where status = 'ativo';
-    `;
+    select * from empresa inner join endereco_empresa endereco on empresa.id_empresa = endereco.fk_empresa where status = 'ativo';    `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
@@ -39,7 +38,7 @@ function listar() {
 function puxar_dados_empresa(id_empresa) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-    select * from empresa inner join endereco_empresa endereco on empresa.id_empresa = endereco.fk_empresa where status = 'ativo';
+     select * from empresa join endereco_empresa on fk_empresa = id_endereco where status = 'ativo' and id_empresa = ${id_empresa};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
