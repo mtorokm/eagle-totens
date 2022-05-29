@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Colaboradores</title>
+
+    <link rel="icon" href="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png">
+    <!-- Google Font: Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <!-- <link rel="stylesheet" href="../dist/css/adminlte.min.css"> -->
+    <!-- DataTables -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="css/todosColaboradores.css">
+
+    <link rel="stylesheet" href="../dashGerente/css/indexGerente.css">
+    <link rel="stylesheet" href="../dashSuporte/CSS/visaogeral.css">
+    <!-- 
+    <link rel="stylesheet" href="../dashSuporte/CSS/stylecadastrototem_ET.css">
+ -->
+    <script type="text/javascript" src="cadColab.js"></script>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__wobble" src="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png" alt=""
+                width="400">
+        </div>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="./index_suport.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a class="brand-link">
+                <img src="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png" alt=" Logo"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Eagle Totens</span>
+
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="info">
+                        <h5 style="color:white;">Olá, <span style="color: fff;" id="b_usuario">usuário</span>!
+                        </h5>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="../dashGerente/indexGerente.html" class="nav-link">
+                                <i class="fa-solid fa-house"></i>
+                                <p style="font-size:larger;">Dashboard - Visão Geral</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                <p>
+                                    Empresa
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../dashEmpresa/listaEmpresa.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p> Todas as empresas</p>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../dashEmpresa/cadastroEmpresa.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p>Cadastrar empresa</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                <p>
+                                    Colaborador
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../dashGerente/listaColaboradores.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p> Todos os colaboradores</p>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../dashGerente/cadastroColaborador.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p>Cadastrar colaborador</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                <p>
+                                    Totem
+                                    <i class="fas fa-angle-left right"></i>
+
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../dashSuporte/visaoGeralTotens.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p> Todos os totens</p>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../dashSuporte/cadastrarTotem.html" class="nav-link">
+                                        <i class="nav-icon far fa-circle "></i>
+                                        <p>Cadastrar totem</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link">
+                                <i class="nav-icon far fa-circle "></i>
+                                <p>Sair</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+
+                </nav>
+
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <style>
+                .modal-content {
+                    background-color: #3a3a3a !important;
+                }
+
+                label {
+                    color: #ffe611 !important;
+                }
+
+                .form-control {
+                    border-radius: 1rem !important;
+                    background-color: #bcbcbc !important;
+                }
+
+                .form-control:focus {
+                    border-color: #f1ff80 !important;
+                    box-shadow: 0px 0px 20px -0.2rem rgb(238, 255, 0) !important;
+                }
+
+                .btn-default {
+                    border-radius: 1rem !important;
+                }
+
+                .btn-default:focus {
+                    box-shadow: 0px 0px 20px -0.2rem rgb(238, 255, 0) !important;
+                    background-color: #5a5a5a !important;
+                }
+
+                .btn-save {
+                    background-color: #ffe602 !important;
+                    /* color: aliceblue !important; */
+                }
+
+                .modal-header .close {
+                    margin: 0 !important;
+                    padding: 0 1rem;
+                }
+            </style>
+            <div class="box-body">
+                <table id="tbColab" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <!-- <th></th> -->
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Cargo</th>
+                            <th>Email</th>
+                            <th>Senha</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+
+                        <tr>
+                            <td>Brenda</td>
+                            <td>11949940145</td>
+                            <td>Gerente</td>
+                            <td>Brendarobertars48@gmail.com</td>
+                            <td>*****</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-info" data-toggle="modal"
+                                        data-target="#edit-modal">
+                                        <i class="fa fa-edit"></I>
+                                    </button>
+                                    <button type="button" class="btn btn-info" data-toggle="modal"
+                                        data-target="#delete-modal">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modal fade" id="edit-modal" onload="preecherCamposForm()">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 style="color:#ffe602 ;" class="header" align="center"><b>Edit User</b></h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Nome</label>
+                                        <input onkeyup="validNome()" id="input_nomeModal" type="text"
+                                            class="form-control" name="username" placeholder="User name">
+                                        <div id="div_msg"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Telefone</label>
+                                        <input onkeyup="validTel()" id="telModal" type="text" class="form-control"
+                                            name="telefone" placeholder="Enter telefone">
+                                        <div id="div_msg1"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Cargo</label>
+                                        <select id="lista_funcaoModal" class="form-control" name="funcao">
+                                            <option value="1">Manutenção</option>
+                                            <option value="2">Gerente</option>
+                                            <option value="3">Suporte eagle Toten's</option>
+                                        </select>
+                                        <!-- <input type="text" class="form-control" name="cargo" placeholder="Enter cargo"> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input onkeyup="validEmail()" id="input_emailModal" type="text"
+                                            class="form-control" name="email" placeholder="Enter email">
+                                        <div id="div_msg2"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Change Password</label>
+                                        <input onkeyup="validSenha()" id="input_senhaModal" type="text"
+                                            class="form-control" name="change_password" placeholder="Enter password">
+                                        <div id="div_msg3"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default pull-left"
+                                        data-dismiss="modal">Close</button>
+                                    <button onclick="salvar()" type="submit" class="btn btn-default btn-save">Save
+                                        changes</button>
+                                    <span id="id_colaboradorModal" style="display: none;"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+            <!-- right col -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+
+            </div>
+            <strong>Copyright &copy;2022 <a href="../index.html">Eagle Totens</a>.</strong>
+        </footer>
+        n
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script src="../plugins/inputmask/jquery.inputmask.min.js"></script>
+
+</body>
+
+</html>
+<script>
+
+    b_usuario.innerHTML = localStorage.USUARIO_NOME;
+
+    buscar() //funcionando no local
+
+    //deletar()
+
+    function deletar(cellId) {
+        var idColaboradorVar = cellId;
+        fetch("/colaboradores/deletar", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idColaborador: idColaboradorVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                if (confirm('Deseja mesmo remover o colaborador?')) {
+                    window.alert("Deletado com sucesso!");
+                    window.location = "listaColaboradores.html";
+                } else {
+                    throw ("Houve um erro ao tentar realizar deletar colaborador!");
+                }
+            }
+
+
+
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+    }
+
+
+    function atualizar() {
+        var idColaboradorVar = id_colaboradorModal.innerHTML;
+        //nome,nivel_acesso,funcao,telefone,email,senha,fkEmpresa
+        var nomeVar = input_nomeModal.value;
+        var telefoneVar = telModal.value;
+        var emailVar = input_emailModal.value;
+        var senhaVar = input_senhaModal.value;
+        var nivel_acessoVar = lista_funcao.value;
+        var funcaoVar;
+
+        if (nivel_acessoVar == 1) {
+            funcaoVar = "Manutenção";
+        } else if (funcaoVar == 'Gerente') {
+            funcaoVar = "Gerente"
+        } else {
+            funcaoVar = "Suporte eagle Toten's";
+        }
+
+
+        fetch("/colaboradores/atualizar", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                telefone: telefoneVar,
+                nivel_acesso: nivel_acessoVar,
+                funcao: funcaoVar,
+                email: emailVar,
+                senha: senhaVar,
+                idColaborador: idColaboradorVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Atualizado com sucesso!");
+                window.location = "listaColaboradores.html";
+                //                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar atualizar colaborador!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+    }
+
+    function buscar() {
+        var fkEmpresaVar = sessionStorage.FK_EMPRESA
+        console.log(fkEmpresaVar);
+        //inicio fetch
+        fetch("/colaboradores/listar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkEmpresa: fkEmpresaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Lista puxando com sucesso");
+                resposta.json().then(json => {
+
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var listaNomes = [];
+                    var listaTelefone = [];
+                    var listaFuncoes = [];
+                    var listaEmail = [];
+                    var listaSenha = [];
+                    var listaId = [];
+                    console.log(json.length);
+                    for (var i = 0; i < json.length; i++) {
+                        listaNomes.push(json[i].nome);
+                        listaFuncoes.push(json[i].funcao);
+                        listaEmail.push(json[i].email);
+                        listaSenha.push(json[i].senha);
+                        listaTelefone.push(json[i].telefone);
+                        listaId.push(json[i].id_colaborador);
+                    }
+                    for (var i = 0; i < json.length; i++) {
+                        cadColab(listaNomes[i], listaTelefone[i], listaFuncoes[i], listaEmail[i], listaSenha[i], i, listaId[i]);
+                    }
+
+
+                });
+
+            } else {
+                throw ("Erro ao puxar lista");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+        //fim fetch
+    }
+
+
+
+
+    $(document).ready(function () {
+        /**
+         * for showing edit item popup
+         */
+
+        $(document).on('click', "#edit-item", function () {
+            $(this).addClass('edit-item-trigger-clicked'); //useful for identifying which trigger was clicked and consequently grab data from the correct row and not the wrong one.
+
+            var options = {
+                'backdrop': 'static'
+            };
+            $('#edit-modal').modal(options)
+        })
+
+        // on modal show
+        $('#edit-modal').on('show.bs.modal', function () {
+            var el = $(".edit-item-trigger-clicked"); // See how its usefull right here? 
+            var row = el.closest(".data-row");
+
+            // get the data
+            var id = el.data('item-id');
+            var name = row.children(".name").text();
+            var description = row.children(".description").text();
+
+            // fill the data in the input fields
+            $("#modal-input-id").val(id);
+            $("#modal-input-name").val(name);
+            $("#modal-input-description").val(description);
+
+        })
+
+        // on modal hide
+        $('#edit-modal').on('hide.bs.modal', function () {
+            $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
+            $("#edit-form").trigger("reset");
+        })
+    })
+
+    var colab, index;
+
+    function cadColab(nome, telefone, cargo, email, senha, contador, id_colaborador) {
+
+        colab = document.getElementById("tbColab");
+        var qntlinhas = colab.rows.length
+        var linha = colab.insertRow(qntlinhas);
+
+        var cellNome = linha.insertCell(0);
+        var cellTelefone = linha.insertCell(1);
+        var cellCargo = linha.insertCell(2);
+        var cellEmail = linha.insertCell(3);
+        var cellSenha = linha.insertCell(4);
+        var callAcao = linha.insertCell(5);
+        var cellId = linha.insertCell(6);
+
+        cellNome.innerHTML = nome;
+        cellTelefone.innerHTML = telefone;
+        cellCargo.innerHTML = cargo;
+        cellEmail.innerHTML = email;
+        cellSenha.innerHTML = senha;
+        cellId.innerHTML = id_colaborador;
+        cellId.style = 'display: none';
+        cellId.setAttribute('id', id_colaborador);
+
+        var div = document.createElement('div');
+        div.classList.add('btn-group');
+        callAcao.appendChild(div);
+
+
+        var bt1 = document.createElement('button');
+        div.appendChild(bt1);
+        bt1.classList.add('btn-info');
+        bt1.classList.add('btn');
+        bt1.setAttribute('id', `btEdit${contador}`);
+        bt1.setAttribute("onclick", `preencherCamposForm(${id_colaborador})`)
+
+        var imgEdit = document.createElement('i');
+        bt1.appendChild(imgEdit);
+        imgEdit.classList.add('fa-edit');
+        imgEdit.classList.add('fa');
+
+        var editar = document.getElementById(`btEdit${contador}`);
+        editar.dataset.toggle = "modal";
+        editar.dataset.target = "#edit-modal"
+
+        var bt2 = document.createElement('button');
+        callAcao.appendChild(div);
+        div.appendChild(bt2);
+        bt2.classList.add('btn-info');
+        bt2.classList.add('btn');
+        bt2.setAttribute('id', `btDel${contador}`);
+        bt2.setAttribute("onclick", `deletar(${cellId.innerHTML})`);
+
+        var imgDel = document.createElement('i');
+        bt2.appendChild(imgDel);
+        imgDel.classList.add('fa-trash');
+        imgDel.classList.add('fa');
+
+        var delet = document.getElementById(`btDel${contador}`);
+        delet.dataset.toggle = "modal";
+        delet.dataset.target = "#delet-modal"
+
+
+
+        //limpar();
+    }
+
+    function altColab(nome, telefone, cargo, email, senha) {
+
+        colab.rows[index].cells[0].innerHTML = nome
+        colab.rows[index].cells[1].innerHTML = telefone
+        colab.rows[index].cells[2].innerHTML = cargo
+        colab.rows[index].cells[3].innerHTML = email
+        colab.rows[index].cells[4].innerHTML = senha
+
+    }
+
+    function preencherCamposForm(id_colaborador) {
+        var fkEmpresaVar = sessionStorage.FK_EMPRESA
+        alert('ollá');
+        fetch("/colaboradores/listar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkEmpresa: fkEmpresaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Lista puxando com sucesso/preencher/");
+                resposta.json().then(json => {
+
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var nome;
+                    var telefone;
+                    var funcao;
+                    var email;
+                    var senha;
+                    console.log(json.length);
+                    for (var i = 0; i < json.length; i++) {
+                        if (json[i].id_colaborador == id_colaborador) {
+                            nome = json[i].nome;
+                            funcao = json[i].funcao;
+                            email = json[i].email;
+                            senha = json[i].senha;
+                            telefone = json[i].telefone;
+
+                        }
+                    }
+                    document.getElementById("input_nomeModal").value = nome;
+                    document.getElementById("telModal").value = telefone;
+                    document.getElementById("lista_funcaoModal").value = funcao;
+                    document.getElementById("input_emailModal").value = email;
+                    document.getElementById("input_senhaModal").value = senha;
+                    document.getElementById("id_colaboradorModal").innerHTML = id_colaborador;
+
+
+                });
+
+            } else {
+                throw ("Erro ao puxar lista");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+
+
+    }
+
+    /* function delColab(id) {
+
+        if (confirm('Deseja mesmo remover o colaborador?')) {
+            colab = document.getElementById("tbColab");
+            var qntlinhas = colab.rows.length;
+            var linhaExcluida = id;
+            linhaExcluida = deleteRow(qntlinhas);
+
+            // linhaExcluida = colab.remove(qntlinhas);
+            colab.remove(linhaExcluida);
+
+        }
+
+
+    }
+ */
+    function limpar() {
+        document.getElementById("input_nome").value = '';
+        document.getElementById("input_sobrenome").value = '';
+        document.getElementById("tel").value = '';
+        document.getElementById("lista_funcao").value = '';
+        document.getElementById("input_email").value = '';
+        document.getElementById("input_senha").value = '';
+    }
+
+
+    function cadastrar() {
+        //aguardar();
+
+        var nomeVar = input_nome.value;
+        var sobrenomeVar = input_sobrenome.value;
+        var telefoneVar = tel.value;
+        var nivel_acessoVar = lista_funcao.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var funcaoVar = "";
+        if (nivel_acessoVar == 1) {
+            funcaoVar = "Manuteção";
+        } else if (nivel_acessoVar == 2) {
+            funcaoVar = "Gerente";
+        } else {
+            funcaoVar = "eagle totens";
+        }
+        nomeVar = nomeVar + " " + sobrenomeVar;
+
+        fetch("/colaboradores/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                telefone: telefoneVar,
+                nivel_acesso: nivel_acessoVar,
+                funcao: funcaoVar,
+                email: emailVar,
+                senha: senhaVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (validaCampo == true) {
+                if (resposta.ok) {
+                    window.alert("Cadastro realizado com sucesso!");
+                    window.location = "cadastroColaborador.html";
+                    finalizarAguardar();
+                    limpar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+    }
+</script>
+<script>
+    const telModal = document.getElementById('telModal') // Seletor do campo de telefone
+
+    telModal.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
+    telModal.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
+
+    const mascaraTelefone = (valor) => {
+        valor = valor.replace(/\D/g, "")
+        valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2")
+        valor = valor.replace(/(\d)(\d{4})$/, "$1-$2")
+        telModal.value = valor // Insere o(s) valor(es) no campo
+    }
+
+    function validNome() {
+        var nome = input_nomeModal.value;
+        if (nome.length >= 3) {
+            div_msg.innerHTML = '';
+        } else {
+            div_msg.innerHTML = '<span style="color: red;font-size:12px;">Caracteres insuficientes!</span>';
+            input_nomeModal.style.borderColor = 'red';
+        }
+    }
+
+    function validTel() {
+
+        var numero = telModal.value;
+
+        if (numero.length > 14) {
+            div_msg1.innerHTML = '';
+        } else {
+            div_msg1.innerHTML = `<span style="color: red;font-size:12px;">
+            Digite DDD + números!!!.</span>`;
+            telModal.style.borderColor = 'red';
+        }
+    }
+
+    function validEmail() {
+        var email = input_emailModal.value;
+
+        if (email.indexOf('@') && email.indexOf('.') > -1) {
+            div_msg2.innerHTML = '';
+        } else {
+            div_msg2.innerHTML = '<span style="color: red;font-size:12px;">Email invalido!</span>';
+            input_nomeModal.style.borderColor = 'red';
+        }
+    }
+
+    function validSenha() {
+        var senhas = input_senhaModal.value;
+
+        if (senhas.length > 6 && senhas.indexOf('!') > -1 ||
+            senhas.indexOf('@') > -1 ||
+            senhas.indexOf('*') > -1 ||
+            senhas.indexOf('_') > -1) {
+            div_msg3.innerHTML = '';
+        } else {
+            div_msg3.innerHTML = `<span style="color: red;font-size:12px;">
+                Mínimo 6 caracteres; <br> 
+                Mínimo um caracter especial: ! @ *;</span>`;
+            input_senhaModal.style.borderColor = 'red';
+        }
+    }
+</script>
+<script>
+    function salvar() {
+        if (this.validaCampo(validNome, validTel, validEmail, validSenha)) {
+            atualizar();
+            alert('Alterações salva');
+        } else {
+            alert('Houve um erro ao tentar salvar as alterações');
+            console.log(atualizar());
+        }
+
+        console.log(this, this.arrayColaborador);
+    }
+
+    function validaCampo(validNome, validTel, validEmail, validSenha) {
+        let msg = '';
+        if (!validNome) {
+            msg += '-Informe o nome do Colaborador\n'
+        }
+        if (!validTel) {
+            msg += '-Informe o telefone do Colaborador\n'
+        }
+        if (!validEmail) {
+            msg += '-Informe o email do Colaborador\n'
+        }
+        if (!validSenha) {
+            msg += '-Informe a senha do Colaborador\n'
+        }
+        if (msg != '') {
+            alert(msg);
+            return false;
+        }
+
+        return true;
+    }
+</script>
