@@ -4,31 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lista de Colaboradores</title>
+    <title>Cadastro Empresa</title>
 
     <link rel="icon" href="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png">
-    <!-- Google Font: Nunito -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <!-- <link rel="stylesheet" href="../dist/css/adminlte.min.css"> -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     <!-- DataTables -->
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="css/todosColaboradores.css">
-
-    <link rel="stylesheet" href="../dashGerente/css/indexGerente.css">
     <link rel="stylesheet" href="../dashSuporte/CSS/visaogeral.css">
-    <!-- 
-    <link rel="stylesheet" href="../dashSuporte/CSS/stylecadastrototem_ET.css">
- -->
-    <script type="text/javascript" src="cadColab.js"></script>
+    <link rel="stylesheet" href="../dashSuporte/CSS/visao.css">
+    <link rel="stylesheet" href="../dashGerente/css/todosColaboradores.css">
 
+    <!-- <link rel="stylesheet" href="cadastroEmpresa.css"> -->
 </head>
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
+
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__wobble" src="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png" alt="" width="400">
         </div>
@@ -42,16 +37,19 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="./index_suport.html" class="nav-link">Home</a>
                 </li>
+
             </ul>
+
+
         </nav>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside style="background-color: #1C1C1C;" class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a class="brand-link">
                 <img src="../../IMG/Eagle Totens logo aguia sem fundo branco amarelo.png" alt=" Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span style="color: white;" class="brand-text font-weight-light">Eagle Totens</span>
+                <span class="brand-text font-weight-light">Eagle Totens</span>
 
             </a>
 
@@ -59,15 +57,29 @@
             <div class="sidebar">
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <!-- <div class="image">
+                        <img src="../../IMG/perfil-brenda.png" class="img-circle elevation-2" alt="User Image">
+                    </div> -->
                     <div class="info">
                         <h5 style="color:white;">Olá, <span style="color: fff;" id="b_usuario">usuário</span>!
                         </h5>
                     </div>
                 </div>
+
+
+
+
+                <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="../dashGerente/indexGerente.html" class="nav-link">
+                                <i class="fa-solid fa-house"></i>
+                                <p style="font-size:larger;">Dashboard - Visão Geral</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="../widgets.html" class="nav-link">
                                 <i class="fas fa-user-plus"></i>
@@ -79,14 +91,14 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../dashEmpresa/listaEmpresa.html" class="nav-link">
+                                    <a href="listaEmpresa.html" class="nav-link">
                                         <i class="nav-icon far fa-circle "></i>
                                         <p> Todas as empresas</p>
 
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../dashEmpresa/cadastroEmpresa.html" class="nav-link">
+                                    <a href="cadastroEmpresa.html" class="nav-link">
                                         <i class="nav-icon far fa-circle "></i>
                                         <p>Cadastrar empresa</p>
                                     </a>
@@ -171,6 +183,16 @@
             <!-- /.content-header -->
 
             <!-- Main content -->
+            <div class="content-header">
+                <div class="container-fluid">
+
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
             <style>
                 .modal-content {
                     background-color: #3a3a3a !important;
@@ -210,20 +232,40 @@
                 }
             </style>
             <div class="box-body">
-                <table id="tbColab" class="table table-bordered table-hover">
+                <table id="tbEmpresa" class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <!-- <th></th> -->
-                            <th>Nome</th>
+                            <th>Razão Social</th>
+                            <th>CNPJ</th>
                             <th>Telefone</th>
-                            <th>Cargo</th>
-                            <th>Email</th>
-                            <th>Senha</th>
-                            <th>Actions</th>
+                            <th>Lougradouro</th>
+                            <th>N°</th>
+                            <th>UF</th>
+                            <th>Cidade</th>
+                            <th>Actios</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr></tr>
+
+                        <!-- <tr>
+                            <td>Brenda</td>
+                            <td>11949940145</td>
+                            <td>Gerente</td>
+                            <td>Brendarobertars48@gmail.com</td>
+                            <td>*****</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-modal">
+                                        <i class="fa fa-edit"></I>
+                                    </button>
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#delete-modal">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr> -->
 
                     </tbody>
                 </table>
@@ -239,59 +281,47 @@
                             <h4 style="color:#ffe602 ;" class="header" align="center"><b>Edit User</b></h4>
                         </div>
                         <div class="modal-body">
-                            <div>
+                            <form role="form" action="/edit_user">
                                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Nome</label>
-                                        <input onkeyup="validNome()" id="input_nomeModal" type="text" class="form-control" name="username" placeholder="User name">
-                                        <div id="div_msg"></div>
+                                        <label for="exampleInputEmail1">Razao</label>
+                                        <input id="input_razaoModal" type="text" class="form-control" name="username" placeholder="User name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">CNPJ</label>
+                                        <input id="cnpjModal" type="text" class="form-control" name="telefone" placeholder="Enter telefone">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Telefone</label>
-                                        <input onkeyup="validTel()" id="telModal" type="text" class="form-control" name="telefone" placeholder="Enter telefone">
-                                        <div id="div_msg1"></div>
+                                        <input id="telModal" type="text" class="form-control" name="cargo" placeholder="Enter cargo">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Cargo</label>
-                                        <select onclick="validFunc()" id="lista_funcaoModal" class="form-control" name="funcao">
-                                            <option value="1">Manutenção</option>
-                                            <option value="2">Gerente</option>
-                                            <option value="3">Suporte eagle Totens</option>
-                                        </select>
-                                        <div id="div_msg4"></div>
-                                        <!-- <input type="text" class="form-control" name="cargo" placeholder="Enter cargo"> -->
+                                        <label for="exampleInputEmail1">Lougradouro</label>
+                                        <input id="input_LougradouroModal" type="text" class="form-control" name="email" placeholder="Enter email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email</label>
-                                        <input onkeyup="validEmail()" id="input_emailModal" type="text" class="form-control" name="email" placeholder="Enter email">
-                                        <div id="div_msg2"></div>
+                                        <label for="exampleInputEmail1">Numero</label>
+                                        <input id="input_numeroModal" type="text" class="form-control" name="change_password" placeholder="Enter password">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Trocar senha</label>
-                                        <input onkeyup="validSenha()" id="input_senhaModal" type="text" class="form-control" name="change_password" placeholder="Enter password">
-                                        <div id="div_msg3"></div>
+                                        <label for="exampleInputEmail1">UF</label>
+                                        <input id="input_ufModal" type="text" class="form-control" name="change_password" placeholder="Enter password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Cidade</label>
+                                        <input id="input_cidadeModal" type="text" class="form-control" name="change_password" placeholder="Enter password">
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                    <button onclick="salvar()" type="submit" class="btn btn-default btn-save">Save
-                                        changes</button>
-                                    <span id="id_colaboradorModal" style="display: none;"></span>
+                                    <button onclick="atualizar()" type="submit" class="btn btn-default btn-save">Save changes</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-
 
             <!-- right col -->
         </div>
@@ -320,68 +350,54 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script src="../plugins/inputmask/jquery.inputmask.min.js"></script>
 
 </body>
-
-</html>
 <script>
-    b_usuario.innerHTML = localStorage.USUARIO_NOME;
-
     buscar() //funcionando no local
 
     //deletar()
 
-    function deletar(cellId) {
-        var idColaboradorVar = cellId;
-        fetch("/colaboradores/deletar", {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idColaborador: idColaboradorVar,
-            })
-        }).then(function(resposta) {
+    // function deletar(cellId) {
+    //     var idColaboradorVar = cellId;
+    //     fetch("/colaboradores/deletar", {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({
+    //             idColaborador: idColaboradorVar,
+    //         })
+    //     }).then(function(resposta) {
 
-            console.log("resposta: ", resposta);
+    //         console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                if (confirm('Deseja mesmo remover o colaborador?')) {
-                    window.alert("Deletado com sucesso!");
-                    window.location = "listaColaboradores.html";
-                } else {
-                    throw ("Houve um erro ao tentar realizar deletar colaborador!");
-                }
-            }
+    //         if (resposta.ok) {
+    //             if (confirm('Deseja mesmo remover o colaborador?')) {
+    //                 window.alert("Deletado com sucesso!");
+    //                 window.location = "listaColaboradores.html";
+    //             } else {
+    //                 throw ("Houve um erro ao tentar realizar deletar colaborador!");
+    //             }
+    //         }
 
 
 
-        }).catch(function(resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            //finalizarAguardar();
-        });
-    }
+    //     }).catch(function(resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //         //finalizarAguardar();
+    //     });
+    // }
 
 
     function atualizar() {
-        var idColaboradorVar = id_colaboradorModal.innerHTML;
         //nome,nivel_acesso,funcao,telefone,email,senha,fkEmpresa
         var nomeVar = input_nomeModal.value;
-        var telefoneVar = telModal.value;
-        var emailVar = input_emailModal.value;
-        var senhaVar = input_senhaModal.value;
-        var nivel_acessoVar = lista_funcaoModal.value;
-        var funcaoVar;
-
-        if (nivel_acessoVar == 1) {
-            funcaoVar = 'Manutenção';
-        } else if (nivel_acessoVar == 2) {
-            funcaoVar = 'Gerente';
-        } else {
-            funcaoVar = 'Suporte eagle Totens';
-        }
-
+        var nivel_acessoVar = 1000;
+        var funcaoVar = 'Gerente';
+        var telefoneVar = '40028922';
+        var emailVar = 'email';
+        var senhaVar = 'senhaaaa';
+        var idColaboradorVar = 1;
 
         fetch("/colaboradores/atualizar", {
             method: "PUT",
@@ -402,9 +418,8 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                //window.alert("Atualizado com sucesso!");
-
-                window.location = "listaColaboradores.html";
+                window.alert("Atualizado com sucesso!");
+                //window.location = "cadastroColaborador.html";
                 //                finalizarAguardar();
             } else {
                 throw ("Houve um erro ao tentar realizar atualizar colaborador!");
@@ -420,7 +435,7 @@
         var fkEmpresaVar = sessionStorage.FK_EMPRESA
         console.log(fkEmpresaVar);
         //inicio fetch
-        fetch("/colaboradores/listar", {
+        fetch("/empresa/listar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -433,29 +448,39 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                //window.alert("Lista puxando com sucesso");
+                window.alert("Lista puxando com sucesso");
                 resposta.json().then(json => {
 
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    var listaNomes = [];
+                    var listaRazao = [];
+                    var listaCnpj = [];
                     var listaTelefone = [];
-                    var listaFuncoes = [];
-                    var listaEmail = [];
-                    var listaSenha = [];
-                    var listaId = [];
+                    var listaLogradouro = [];
+                    var listaNumero = [];
+                    var listaUf = [];
+                    var listaCidade = [];
                     console.log(json.length);
                     for (var i = 0; i < json.length; i++) {
-                        listaNomes.push(json[i].nome);
-                        listaFuncoes.push(json[i].funcao);
-                        listaEmail.push(json[i].email);
-                        listaSenha.push(json[i].senha);
+                        listaRazao.push(json[i].razao);
+                        listaCnpj.push(json[i].cnpj);
                         listaTelefone.push(json[i].telefone);
-                        listaId.push(json[i].id_colaborador);
+                        listaLogradouro.push(json[i].logradouro);
+                        listaNumero.push(json[i].numero);
+                        listaUf.push(json[i].uf);
+                        listaCidade.push(json[i].cidade);
                     }
                     for (var i = 0; i < json.length; i++) {
-                        cadColab(listaNomes[i], listaTelefone[i], listaFuncoes[i], listaEmail[i], listaSenha[i], i, listaId[i]);
+                        cadEmpresa(
+
+                            listaRazao[i],
+                            listaCnpj[i],
+                            listaTelefone[i],
+                            Listalogradouro[i],
+                            listaNumero[i],
+                            listaUf[i],
+                            listaCidade[i]);
                     }
 
 
@@ -514,29 +539,32 @@
 
     var colab, index;
 
-    function cadColab(nome, telefone, cargo, email, senha, contador, id_colaborador) {
+    function cadEmpresa(razao, cnpj, telefone, logradouro, numero, uf, cidade) {
 
-        colab = document.getElementById("tbColab");
+        colab = document.getElementById("tbEmpresa");
         var qntlinhas = colab.rows.length
         var linha = colab.insertRow(qntlinhas);
 
-        var cellNome = linha.insertCell(0);
-        var cellTelefone = linha.insertCell(1);
-        var cellCargo = linha.insertCell(2);
-        var cellEmail = linha.insertCell(3);
-        var cellSenha = linha.insertCell(4);
-        var callAcao = linha.insertCell(5);
-        var cellId = linha.insertCell(6);
+        var cellRazao = linha.insertCell(0);
+        var cellCnpj = linha.insertCell(1);
+        var cellTelefone = linha.insertCell(2);
+        var cellLogradouro = linha.insertCell(3);
+        var cellNumero = linha.insertCell(4);
+        var cellUf = linha.insertCell(5);
+        var cellCidade = linha.insertCell(6);
+        var callAcao = linha.insertCell(7);
+        var cellId = linha.insertCell(8);
 
-        cellNome.innerHTML = nome;
+        cellRazao.innerHTML = razao;
+        cellCnpj.innerHTML = cnpj;
         cellTelefone.innerHTML = telefone;
-        cellCargo.innerHTML = cargo;
-        cellEmail.innerHTML = email;
-        cellSenha.innerHTML = "*****";
-        cellId.innerHTML = id_colaborador;
+        cellLogradouro.innerHTML = logradouro;
+        cellNumero.innerHTML = numero;
+        cellUf.innerHTML = uf;
+        cellCidade.innerHTML = cidade;
+        callAcao.classList.add('btn-group');
         cellId.style = 'display: none';
-        cellId.setAttribute('id', id_colaborador);
-        // cellSenha.setAttribute('type', password);
+        cellId.setAttribute('id', id_empresa);
 
         var div = document.createElement('div');
         div.classList.add('btn-group');
@@ -548,7 +576,7 @@
         bt1.classList.add('btn-info');
         bt1.classList.add('btn');
         bt1.setAttribute('id', `btEdit${contador}`);
-        bt1.setAttribute("onclick", `preencherCamposForm(${id_colaborador})`)
+        bt1.setAttribute("onclick", `preencherCamposForm(${id_empresa})`)
 
         var imgEdit = document.createElement('i');
         bt1.appendChild(imgEdit);
@@ -581,20 +609,11 @@
         //limpar();
     }
 
-    function altColab(nome, telefone, cargo, email, senha) {
 
-        colab.rows[index].cells[0].innerHTML = nome
-        colab.rows[index].cells[1].innerHTML = telefone
-        colab.rows[index].cells[2].innerHTML = cargo
-        colab.rows[index].cells[3].innerHTML = email
-        colab.rows[index].cells[4].innerHTML = senha
-
-    }
-
-    function preencherCamposForm(id_colaborador) {
+    function preencherCamposForm(id_empresa) {
         var fkEmpresaVar = sessionStorage.FK_EMPRESA
         alert('ollá');
-        fetch("/colaboradores/listar", {
+        fetch("/empresa/listar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -607,35 +626,40 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                //window.alert("Lista puxando com sucesso/preencher/");
+                window.alert("Lista puxando com sucesso/preencher/");
                 resposta.json().then(json => {
 
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    var nome;
+                    var razao;
+                    var cnpj;
                     var telefone;
-                    var funcao;
-                    var email;
-                    var senha;
+                    var logradouro;
+                    var numero;
+                    var uf;
+                    var cidade;
                     console.log(json.length);
                     for (var i = 0; i < json.length; i++) {
-                        if (json[i].id_colaborador == id_colaborador) {
-                            nome = json[i].nome;
-                            funcao = json[i].funcao;
-                            email = json[i].email;
-                            senha = json[i].senha;
+                        if (json[i].id_empresa == id_empresa) {
+                            razao = json[i].razao;
+                            cnpj = json[i].cnpj;
                             telefone = json[i].telefone;
+                            logradouro = json[i].logradouro;
+                            numero = json[i].numero;
+                            uf = json[i].uf;
+                            cidade = json[i].cidade;
 
                         }
                     }
-                    document.getElementById("input_nomeModal").value = nome;
-                    document.getElementById("telModal").value = telefone;
-                    document.getElementById("lista_funcaoModal").value = funcao;
-                    document.getElementById("input_emailModal").value = email;
-                    document.getElementById("input_senhaModal").value = senha;
-                    document.getElementById("id_colaboradorModal").innerHTML = id_colaborador;
-                    document.getElementById("lista_funcaoModal").value = nivel_acesso;
+                    document.getElementById("input_razaoModal").value = nome;
+                    document.getElementById("cnpjModal").value = telefone;
+                    document.getElementById("telModal").value = funcao;
+                    document.getElementById("input_LougradouroModal").value = email;
+                    document.getElementById("input_ufModal").value = senha;
+                    document.getElementById("input_cidadeModal").value = senha;
+
+
 
                 });
 
@@ -653,29 +677,17 @@
 
     /* function delColab(id) {
 
-        if (confirm('Deseja mesmo remover o colaborador?')) {
-            colab = document.getElementById("tbColab");
-            var qntlinhas = colab.rows.length;
+        if (confirm('Deseja mesmo remover empresa?')) {
+            empresa = document.getElementById("tbEmpresa");
+            var qntlinhas = empresa.rows.length;
             var linhaExcluida = id;
             linhaExcluida = deleteRow(qntlinhas);
-
-            // linhaExcluida = colab.remove(qntlinhas);
-            colab.remove(linhaExcluida);
 
         }
 
 
     }
  */
-    function limpar() {
-        document.getElementById("input_nome").value = '';
-        document.getElementById("input_sobrenome").value = '';
-        document.getElementById("tel").value = '';
-        document.getElementById("lista_funcao").value = '';
-        document.getElementById("input_email").value = '';
-        document.getElementById("input_senha").value = '';
-    }
-
 
     function cadastrar() {
         //aguardar();
@@ -688,11 +700,11 @@
         var senhaVar = input_senha.value;
         var funcaoVar = "";
         if (nivel_acessoVar == 1) {
-            funcaoVar = 'Manuteção';
+            funcaoVar = "Manuteção";
         } else if (nivel_acessoVar == 2) {
-            funcaoVar = 'Gerente';
+            funcaoVar = "Gerente";
         } else {
-            funcaoVar = 'Suporte eagle Totens';
+            funcaoVar = "eagle totens";
         }
         nomeVar = nomeVar + " " + sobrenomeVar;
 
@@ -713,15 +725,242 @@
 
             console.log("resposta: ", resposta);
 
-            if (validaCampo == true) {
-                if (resposta.ok) {
-                    window.alert("Cadastro realizado com sucesso!");
-                    window.location = "cadastroColaborador.html";
-                    finalizarAguardar();
-                    limpar();
-                } else {
-                    throw ("Houve um erro ao tentar realizar o cadastro!");
-                }
+            if (resposta.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "cadastroColaborador.html";
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function(resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+        limpar();
+    }
+</script>
+<script>
+    var fkEmpresa;
+    //buscar();
+    //atualizar();
+    // desativar();
+
+    function buscar() {
+        console.log();
+        //inicio fetch
+        fetch("/empresa/listar", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function(resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Lista puxando com sucesso");
+                resposta.json().then(json => {
+
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                });
+
+            } else {
+                throw ("Erro ao puxar lista");
+            }
+        }).catch(function(resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+        //fim fetch
+    }
+
+    function atualizar() {
+        //nome,nivel_acesso,funcao,telefone,email,senha,fkEmpresa
+        var razao_socialVar = "Rua dos pratos";
+        var cnpjVar = "9129481324";
+        var telefoneVar = "40028922";
+        var id_empresaVar = 3;
+
+        fetch("/empresa/atualizar", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                razao_social: razao_socialVar,
+                cnpj: cnpjVar,
+                telefone: telefoneVar,
+                id_empresa: id_empresaVar,
+            })
+        }).then(function(resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Atualizado com sucesso!");
+                //window.location = "cadastroColaborador.html";
+                //                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar atualizar colaborador!");
+            }
+        }).catch(function(resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+    }
+
+    function desativar() {
+        var statusVar = "inativo";
+        var id_empresaVar = 3;
+        fetch("/empresa/desativar", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                status: statusVar,
+                id_empresa: id_empresaVar
+            })
+        }).then(function(resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Desativado com sucesso!");
+                //window.location = "cadastroColaborador.html";
+                //                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar desativar empresa!");
+            }
+        }).catch(function(resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+    }
+
+    function cadastrar() {
+        //aguardar();
+
+        var razaoSocialVar = razao_social_input.value;
+        var cnpjVar = cnpj_input.value;
+        var telefoneVar = telefone_input.value;
+        fetch("/empresa/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                razaoSocial: razaoSocialVar,
+                cnpj: cnpjVar,
+                telefone: telefoneVar,
+            })
+        }).then(function(resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                buscarFk(cnpjVar);
+                /* 
+                   window.alert("Cadastro realizado com sucesso!");
+                   window.location = "cadastroEmpresa.html";
+                */
+                //inalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function(resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+    }
+
+
+
+    function buscarFk(cnpj) {
+        var cnpjVar = cnpj
+        fetch("/empresa/buscarFk", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                cnpj: cnpjVar,
+            })
+        }).then(function(resposta) {
+            console.log("estou dentro do buscarFk!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+                resposta.json().then(json => {
+                    fkEmpresa = json.id_empresa;
+                    cadastrarEndereco(fkEmpresa)
+                        /*  
+                        var listaCadastradosId [] = json.id_empresa;
+                        listaCadastradosId [0] = 1; 
+                        listaCadastradosId [1] = 2;
+                        listaNome[0] = torok
+                        listaNome[1]
+                        setTimeout(function() {
+                            if (sessionStorage.NIVEL_ACESSO == 1) {
+                                window.location = "./Dash/dashSuporte/indexSuporte.html";
+                            } else if (sessionStorage.NIVEL_ACESSO == 2 || sessionStorage.NIVEL_ACESSO == 3) {
+                                window.location = "./Dash/dashGerente/indexGerente.html";
+                            }
+                        }, 1000); // apenas para exibir o loading
+                        */
+                });
+
+            } else {
+                alert("Houve um erro ao tentar buscar fk");
+                console.log("Houve um erro ao tentar  buscar fk!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    //           finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function(erro) {
+            console.log(erro);
+        })
+    }
+
+    function cadastrarEndereco(fk_empresa) {
+        var logradouroVar = logradouro_input.value;
+        var ufVar = lista_uf.value;
+        var cidadeVar = lista_cidade.value;
+        var numeroVar = numero_input.value
+        var fk_empresa = fk_empresa
+        fetch("/empresa/cadastrarEndereco", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                logradouro: logradouroVar,
+                uf: ufVar,
+                cidade: cidadeVar,
+                fk_empresa: fk_empresa,
+                numero: numeroVar
+            })
+        }).then(function(resposta) {
+
+            console.log("resposta: ", resposta);
+
+
+            if (resposta.ok) {
+
+                window.alert("Cadastro realizado com sucesso!");
+                setTimeout(function() {
+                    window.location.reload();
+                }, 2000);
+
+                //inalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro endereco!");
             }
         }).catch(function(resposta) {
             console.log(`#ERRO: ${resposta}`);
@@ -729,113 +968,5 @@
         });
     }
 </script>
-<script>
-    const telModal = document.getElementById('telModal') // Seletor do campo de telefone
 
-    telModal.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
-    telModal.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
-
-    const mascaraTelefone = (valor) => {
-        valor = valor.replace(/\D/g, "")
-        valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2")
-        valor = valor.replace(/(\d)(\d{4})$/, "$1-$2")
-        telModal.value = valor // Insere o(s) valor(es) no campo
-    }
-
-    function validNome() {
-        var nome = input_nomeModal.value;
-        if (nome.length >= 3) {
-            div_msg.innerHTML = '';
-        } else {
-            div_msg.innerHTML = '<span style="color: red;font-size:12px;">Caracteres insuficientes!</span>';
-            input_nomeModal.style.borderColor = 'red';
-        }
-    }
-
-    function validTel() {
-
-        var numero = telModal.value;
-
-        if (numero.length > 14) {
-            div_msg1.innerHTML = '';
-        } else {
-            div_msg1.innerHTML = `<span style="color: red;font-size:12px;">
-            Digite DDD + números!!!.</span>`;
-            telModal.style.borderColor = 'red';
-        }
-    }
-
-    function validFunc() {
-        var func = lista_funcaoModal.value;
-        if (func != '') {
-            div_msg4.innerHTML = '';
-        } else {
-            div_msg4.innerHTML = `<span style="color: red;font-size:12px;">
-            Campo precisa ser preenchido.</span>`;
-            lista_funcaoModal.style.borderColor = 'red';
-        }
-    }
-
-    function validEmail() {
-        var email = input_emailModal.value;
-
-        if (email.indexOf('@') && email.indexOf('.') > -1) {
-            div_msg2.innerHTML = '';
-        } else {
-            div_msg2.innerHTML = '<span style="color: red;font-size:12px;">Email invalido!</span>';
-            input_nomeModal.style.borderColor = 'red';
-        }
-    }
-
-    function validSenha() {
-        var senhas = input_senhaModal.value;
-
-        if (senhas.length > 6 && senhas.indexOf('!') > -1 ||
-            senhas.indexOf('@') > -1 ||
-            senhas.indexOf('*') > -1 ||
-            senhas.indexOf('_') > -1) {
-            div_msg3.innerHTML = '';
-        } else {
-            div_msg3.innerHTML = `<span style="color: red;font-size:12px;">
-                Mínimo 6 caracteres; <br> 
-                Mínimo um caracter especial: ! @ *;</span>`;
-            input_senhaModal.style.borderColor = 'red';
-        }
-    }
-</script>
-<script>
-    function salvar() {
-
-        if (this.validaCampo(validNome(), validTel(), validEmail(), validSenha())) {
-            atualizar();
-            alert('Alterações salva');
-        } else {
-            alert('Houve um erro ao tentar salvar as alterações');
-            console.log(atualizar());
-        }
-
-        console.log(this, this.arrayColaborador);
-    }
-
-    function validaCampo(validNome, validTel, validEmail, validSenha) {
-        let msg = '';
-        if (!validNome) {
-            msg += '-Informe o nome do Colaborador\n'
-        }
-        if (!validTel) {
-            msg += '-Informe o telefone do Colaborador\n'
-        }
-        if (!validEmail) {
-            msg += '-Informe o email do Colaborador\n'
-        }
-        if (!validSenha) {
-            msg += '-Informe a senha do Colaborador\n'
-        }
-        if (msg != '') {
-            alert(msg);
-            return false;
-        }
-
-        return true;
-    }
-</script>
+</html>
